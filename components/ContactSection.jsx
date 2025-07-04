@@ -9,13 +9,13 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-18 text-center">
           <span className="text-primary">Contact</span> Me!
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-8">
             {/* Contact INFO */}
-            <div className="space-y-6 justify-center">
+            <div className="flex flex-col space-y-6 justify-end">
               {/* Email */}
               <div className="flex items-start sm:items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
