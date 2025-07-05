@@ -3,19 +3,17 @@ import { cn } from "../src/lib/utils";
 import Toastify from 'toastify-js'
 
 export const ContactSection = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-18 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
           <span className="text-primary">Contact</span> Me!
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-8">
             {/* Contact INFO */}
-            <div className="flex flex-col space-y-6 justify-end">
+            <div className="space-y-6 justify-center">
               {/* Email */}
               <div className="flex items-start sm:items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -53,15 +51,12 @@ export const ContactSection = () => {
                   <a href="https://x.com/Pokemon?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" className="hover:text-primary" target="_blank"><Twitter/></a>
                   <a href="https://www.instagram.com/johnlucc/?hl=af" className="hover:text-primary" target="_blank"><InstagramIcon/></a>
                 </div>
-
               </div>
-
-
             </div>
           </div>
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-xl font-semibold text-gray-300 mb-6">
-              Message Me!
+              (dont) Message Me! (not implemented)
             </h3>
             <form className="space-y-6">
               <div>
@@ -71,9 +66,7 @@ export const ContactSection = () => {
                 name="name"
                 required
                 className="w-full px-4 py-1 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-          
                  />
-                
               </div>
               <div>
                 <label htmlFor="email" className=" block text-sm font-medium mb-2 text-left text-gray-400">Email</label>
@@ -83,22 +76,22 @@ export const ContactSection = () => {
                 required
                 className="w-full px-4 py-1 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                  />
-                
               </div>
               <div>
-                <label htmlFor="message" className=" block text-sm font-medium mb-2 text-left text-gray-400"></label>
-                <input type="text"
-                id="Message"
-                name="Message"
-                className="w-full px-4 pt-3 pb-28 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                <label htmlFor="message" className=" block text-sm font-medium mb-2 text-left text-gray-400">Message</label>
+                <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                 placeholder="Type your message here..."
-
                  />
-                
               </div>
-              <button type="submit" className={cn("cosmic-button w-full felx items-center justify-center gap-2")} onClick={handleSubmit}> <Send className="mx-auto my-1"/> </button>
+              <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2")}> 
+                <Send className="mx-auto my-1"/> 
+              </button>
             </form>
-
           </div>
         </div>
       </div>
