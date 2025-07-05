@@ -27,7 +27,7 @@ export const NavBar = () => {
         "fixed w-full z-40 transitional-all duration-300", 
         isScrolled ? "py-5 bg-background/80 backdrop-blur-md shadow-xs" : "py-5")}
     >
-      <div className="container flex items-center gap-10">
+      <div className="container flex items-center justify-between md:justify-start md:gap-10">
         <a href="#hero" className="text-xl font-bold text-primary flex item-center">
           <span className="relative z-10">
             <span className="text-glow text-foreground">John</span> Luc
